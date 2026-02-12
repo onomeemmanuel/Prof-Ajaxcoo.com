@@ -1,0 +1,256 @@
+/* Reset and base styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	background-color :unset;
+	background-blend-mode:lighten;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+
+
+	/* smooth scrolling between sections */
+}
+
+/* Header and profile image */
+header {
+	background-image: url(images/header/profi6.jpeg);
+	background-size: cover;
+	color: #fff;
+	padding: 1rem;
+	text-align: center;
+	position: relative/* for sticky header * /;
+	/* stays at top when scrolling */
+	
+}
+
+#profile-pic {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 1rem;
+}
+
+#profile-pic img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 3px solid #fff;
+	transition: transform 0.3s ease;
+	/* subtle hover effect */
+}
+
+#profile-pic img:hover {
+	transform: scale(1.05);
+}
+
+/* Navigation */
+nav h1 {
+	margin-bottom: 0.5rem;
+}
+
+nav ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+nav a:hover {
+	color: #ffd700;
+	/* gold highlight */
+}
+
+/* Hero section */
+#hero {
+	text-align: center;
+	padding: 4rem 1rem;
+	background: linear-gradient(135deg, #f4f4f4, #eaeaea);
+	animation: fadeIn 1s ease-in;
+}
+
+#hero h2 {
+	font-size: 2rem;
+	margin-bottom: 0.5rem;
+}
+
+#hero p {
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.7rem 1.5rem;
+	background: #333;
+	color: #fff;
+	border-radius: 4px;
+	text-decoration: none;
+	transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+	background: #555;
+	transform: translateY(-3px);
+}
+
+/* Sections */
+section {
+	padding: 2rem 1rem;
+	max-width: 1200px;
+	margin: auto;
+	animation: fadeUp 1s ease-in;
+}
+
+section h2 {
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+/* Grid and cards */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+}
+
+.card {
+	background: #fff;
+	padding: 1rem;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+	width: 100%;
+	border-radius: 8px;
+	margin-bottom: 0.5rem;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card a {
+	display: inline-block;
+	margin-top: 0.5rem;
+	padding: 0.5rem 1rem;
+	background: #333;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background 0.3s ease;
+}
+
+.card a:hover {
+	background: #555;
+}
+
+/* Contact form */
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	max-width: 400px;
+	margin: auto;
+}
+
+form input,
+form textarea {
+	padding: 0.7rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+form button {
+	background: #333;
+	color: #fff;
+	padding: 0.7rem;
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: background 0.3s ease;
+}
+
+form button:hover {
+	background: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+	#hero {
+		padding: 2rem 1rem;
+	}
+
+	#hero h2 {
+		font-size: 1.5rem;
+	}
+
+	#hero p {
+		font-size: 1rem;
+	}
+
+	nav ul {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	#profile-pic img {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+@media (max-width: 480px) {
+	.grid {
+		grid-template-columns: 1fr;
+	}
+
+	#hero h2 {
+		font-size: 1.3rem;
+	}
+
+	#hero p {
+		font-size: 0.9rem;
+	}
+}
