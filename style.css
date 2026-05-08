@@ -34,7 +34,7 @@ body {
 
 /* Header and profile image */
 header {
-	background: linear-gradient(#f0f5ec), url(images/header/profi6.jpeg);
+	background: url(images/header/profi6.jpeg);
 	background-size: cover, cover;
 	background-position: center;
 	background-blend-mode: multiply;
@@ -489,7 +489,7 @@ footer p {
 		padding: 1rem 0;
 		min-height: 50vh;
 		margin: 0;
-		background: linear-gradient(#f0f5ec); /* Remove background image on mobile for better performance */
+	    background:url(images/header/profi6.jpeg)
 		background-size: cover;
 		background-position: center;
 		background-blend-mode: normal;
@@ -574,9 +574,4 @@ footer p {
 	#hero p {
 		font-size: 1rem;
 	}
-
-	header {
-		background: linear-gradient(#f0f5ec); /* Ensure no background image on small screens */
-	}
-}
 
